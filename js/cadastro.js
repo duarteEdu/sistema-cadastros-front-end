@@ -9,19 +9,20 @@ form.addEventListener('submit', (e) => {
     // Adiciona uma classe de loading no botão do form
 
 form.addEventListener('formdata', (e) => {
+
     var data = e.formData;
 
     if (e.formData.get('nome').length < 3){
 
         var p = document.createElement("p");
         p.innerText = "Erro: Deve conter mais que 3 caracteres.";
-        p.className = "errorP";
+        p.className = "errorP";     
         document.getElementById("nome").classList.add("errorInput");
         document.getElementById("nome").after(p);
         return false;
     }
     
-    if (e.formData.get('cpf').length == 0){
+    if (e.formData.get('cpf').length != 11){
 
         var p = document.createElement("p");
         p.innerText = "Erro: CPF inválido.";
@@ -31,7 +32,7 @@ form.addEventListener('formdata', (e) => {
         return false;
     }
 
-    if (e.formData.get('telefone').length == 11){
+    if (e.formData.get('telefone').length < 8){
 
         var p = document.createElement("p");
         p.innerText = "Erro: Telefone inválido.";
@@ -45,11 +46,13 @@ form.addEventListener('formdata', (e) => {
 
         var p = document.createElement("p");
         p.innerText = "Erro: Email Inválido.";
-        p.className = "errorP";
+        p.className = "errorP";        
         document.getElementById("email").classList.add("errorInput");
         document.getElementById("email").after(p);
         return false;
     }
+
+    // Animação de Loading
 
     document.getElementById("botao").classList.add("sending");
 
@@ -75,21 +78,58 @@ form.addEventListener('formdata', (e) => {
     setTimeout (function(){location.reload();}, 2000);
 });
 
-// Validação de só um dado :(
+// Validação dos inputs e botão disabled/enabled
 
-// var btn = document.getElementById("botao");
-// var inputNome = document.getElementById("nome");
-// var inputCpf = document.getElementById("cpf");
+var btn = document.getElementById("botao");
+var inputNome = document.getElementById("nome");
+var inputCpf = document.getElementById("cpf");
+var inputTelefone = document.getElementById("telefone");
+var inputEmail = document.getElementById("email");
+var classDisabled = document.getElementById("idBtn"); 
 
-// inputNome.addEventListener("input", function (e){
-//     if (inputNome["nome"] === "") {
-//         btn.disabled = true;
-//     } else{        
-//         btn.disabled = false;
-//         btn.classList.add("divButton");
-//     }
-// });
+inputNome.addEventListener("input", function (e){
+    var check = checkIfIsEmpty(this.value);
+    if (!check || !checkIfIsEmpty(inputCpf.value) || !checkIfIsEmpty(inputTelefone.value) || !checkIfIsEmpty(inputEmail.value)) {
+        btn.disabled = true;
+        classDisabled.classList.add("disabled");
+    }else{
+        btn.disabled = false;
+        classDisabled.classList.remove("disabled");
+    }
+});
 
+inputCpf.addEventListener("input", function (e){
+    var check = checkIfIsEmpty(this.value);
+    if (!check || !checkIfIsEmpty(inputNome.value) || !checkIfIsEmpty(inputTelefone.value) || !checkIfIsEmpty(inputEmail.value)) {
+        btn.disabled = true;
+        classDisabled.classList.add("disabled");
+    }else{
+        btn.disabled = false;
+        classDisabled.classList.remove("disabled");
+    }
+});
+
+inputTelefone.addEventListener("input", function (e){
+    var check = checkIfIsEmpty(this.value);
+    if (!check || !checkIfIsEmpty(inputCpf.value) || !checkIfIsEmpty(inputNome.value) || !checkIfIsEmpty(inputEmail.value)) {
+        btn.disabled = true;
+        classDisabled.classList.add("disabled");        
+    }else{
+        btn.disabled = false;
+        classDisabled.classList.remove("disabled");
+    }
+});
+
+inputEmail.addEventListener("input", function (e){
+    var check = checkIfIsEmpty(this.value);
+    if (!check || !checkIfIsEmpty(inputCpf.value) || !checkIfIsEmpty(inputTelefone.value) || !checkIfIsEmpty(inputNome.value)) {
+        btn.disabled = true;
+        classDisabled.classList.add("disabled");
+    }else{
+        btn.disabled = false;
+        classDisabled.classList.remove("disabled");
+    }
+});
 
 // Funções
 
@@ -101,6 +141,12 @@ function retrieveLocalStorage() {
     return obj = JSON.parse(localStorage.getItem('users'));
 }
 
+function checkIfIsEmpty(string) {
+    if (string == "" || string == null) {
+        return false;
+    }
+    return true;
+}
 
 // Pegando dados da url
 

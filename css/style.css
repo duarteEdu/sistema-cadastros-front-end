@@ -32,6 +32,9 @@
 .containerButton:hover{
     opacity: 0.7;
 }
+.containerButton.disabled{
+    background-color: transparent;
+}
 
 /* .divButton{
     width: 250px;
@@ -50,12 +53,12 @@
     border-radius:20px;
 }
 
-/* #botao:disabled{
+#botao:disabled{
     color: #dddcdc;
     background-color: #f6f6f6;
     width: 100%;
     height: 100%;
-} */
+}
 
 .sending{
     border: 2px solid #f3f3f3;
@@ -66,6 +69,7 @@
     height: 25px;
     font-size: 0;
     margin-top: 7px;
+    outline: 0;
 }
 
 @keyframes spin {
@@ -74,7 +78,7 @@
 }
 
 a.linkLista {
-
+    text-decoration: none;
 }
 
 /* CSS Lista de Dados */
@@ -120,3 +124,11 @@ a.linkCadastro{
     text-decoration: none;
 }
 
+
+/* Responsivo */
+
+@media screen and (max-width: 900px) {
+    .form1, .container {
+      width: 100%;
+    }
+  }
