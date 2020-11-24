@@ -17,6 +17,11 @@ Campo email: Deve ser um endereço de email válido.
 
 O submit apenas ficará 'Enabled' quando existir algum dado em todos os campos.
 
+Responsivo???????????
+
+### Testes
+
+Dentro do repositório há um arquivo XXXX.pdf com as funções descritas sendo utilizadas.
 
 ### Clone
 
@@ -25,3 +30,4 @@ Você pode obter o projeto através do comando:
 ```shell
 git clone https://github.com/juansander/sistema-cadastros-front-end.git
 ```
+
