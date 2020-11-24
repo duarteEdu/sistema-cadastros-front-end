@@ -31,7 +31,7 @@ form.addEventListener('formdata', (e) => {
         return false;
     }
 
-    if (e.formData.get('telefone').length == 0){
+    if (e.formData.get('telefone').length == 11){
 
         var p = document.createElement("p");
         p.innerText = "Erro: Telefone inválido.";
