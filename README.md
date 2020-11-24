@@ -6,6 +6,8 @@ Sistema de cadastros de pessoas criado utilizando HTML, CSS e Javascript, sem ne
 
 É possível cadastrar, listar e excluir usuários da lista de cadastros. Os dados persistem no localStorage.
 
+A lista de cadastro irá iniciar com 3 usuários cadastrados.
+
 Há validação dos inputs em condições diferentes.
 
 Campo nome: Deve conter mais que 3 caracteres.
