@@ -1,6 +1,6 @@
 var tabela = document.getElementById("tabela");
 
-// preenche a lista
+// Preenche a lista
 
 var listagemLocalStorage = retrieveLocalStorage();
 

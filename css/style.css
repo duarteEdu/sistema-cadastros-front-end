@@ -18,10 +18,12 @@
     border-bottom:1px solid red;
     width: 250px;
 }
+
 .errorP{
     color:red;
     margin-bottom:-20px;
 }
+
 .containerButton{
     background-color: #00c8b3;
     width: 250px;
@@ -29,18 +31,14 @@
     border-radius:20px;
     margin: 30px auto;
 }
+
 .containerButton:hover{
     opacity: 0.7;
 }
+
 .containerButton.disabled{
     background-color: transparent;
 }
-
-/* .divButton{
-    width: 250px;
-    height: 40px;
-    border-radius:20px;
-} */
 
 .submitButton{
     background-color:transparent;
@@ -93,27 +91,33 @@ table {
     border: 1px solid black;
 
 }
+
 th, td {
     width: 180px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
 th{
     font-weight: bold;
     background-color: black;
     color: white;
 }
+
 td {
     text-align: center;
     color: black;
 }
+
 tr {
     border-bottom: 1px solid #ccc;
 }
+
 .containerLink{
     margin-top: 20px;
     text-align: center;
 }
+
 a.linkCadastro{
     background-color: #00c8b3;
     color: #ffffff;
