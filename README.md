@@ -6,6 +6,12 @@ Sistema de cadastros de pessoas criado utilizando HTML, CSS e Javascript, sem ne
 
 É possível cadastrar, listar e excluir usuários da lista de cadastros. Os dados persistem no localStorage.
 
+Para cadastrar dados novos, basta preencher os campos na página "index.html" e clicar no botão "Cadastrar".
+
+Para ver a lista de dados, aperte no botão "Lista de Dados".
+
+Para excluir usuários da lista de dados, aperte em "Remover" dentro da "Lista de Dados".
+
 A lista de cadastro irá iniciar com 3 usuários cadastrados.
 
 Há validação dos inputs em condições diferentes.
