@@ -17,11 +17,11 @@ Campo email: Deve ser um endereço de email válido.
 
 O submit apenas ficará 'Enabled' quando existir algum dado em todos os campos.
 
-Responsivo???????????
+Ambas as páginas são responsivas.
 
 ### Testes
 
-Dentro do repositório há um arquivo XXXX.pdf com as funções descritas sendo utilizadas.
+Dentro do repositório há um arquivo Testes.pdf com as funções descritas sendo utilizadas.
 
 ### Clone
 
